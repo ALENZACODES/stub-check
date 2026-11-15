@@ -1,0 +1,13 @@
+{
+  "year": 2026,
+  "checked": "2026-11-14",
+  "cpp": { "rate": 0.0595, "ympe": 74600, "basicExemption": 3500, "maxEmployee": 4230.45 },
+  "cpp2": { "rate": 0.04, "yampe": 85000, "maxEmployee": 416.00 },
+  "ei": { "rate": 0.0163, "maxInsurable": 68900, "maxEmployee": 1123.07, "note": "Canada except Quebec" },
+  "periods": { "weekly": 52, "biweekly": 26, "semimonthly": 24, "monthly": 12 },
+  "sources": [
+    "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/payroll/payroll-deductions-contributions/canada-pension-plan-cpp/cpp-contribution-rates-maximums-exemptions.html",
+    "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/payroll/calculating-deductions/making-deductions/second-additional-cpp-contribution-rates-maximums.html",
+    "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/payroll/payroll-deductions-contributions/employment-insurance-ei/ei-premium-rates-maximums.html"
+  ]
+}

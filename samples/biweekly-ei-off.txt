@@ -1,0 +1,10 @@
+QUEEN WEST PRINT SHOP INC
+Employee: Sample Worker            Pay period: Nov 1 to Nov 14, 2026
+Pay frequency: Biweekly            Pay date: Nov 20, 2026
+
+                         Current      Year to date
+Gross pay               2,400.00        52,800.00
+CPP contributions         134.79         2,965.38
+EI premium                 45.60         1,003.20
+Income tax                290.00         6,380.00
+Net pay                 1,929.61        42,451.42

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stub Check · Is your 2026 pay stub right?</title>
+<meta name="description" content="Check the CPP, CPP2, EI and net pay on a 2026 Ontario pay stub. The stub is read on your device when Chrome can, and the math uses the CRA 2026 rates.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to the checker</a>
+<header>
+  <h1>Stub Check</h1>
+  <p class="lede">Paste or photograph a 2026 pay stub. Stub Check reads the amounts, then checks your CPP, CPP2, EI and net pay against the CRA 2026 rates.</p>
+</header>
+<main id="main">
+  <section class="card" aria-labelledby="in-h">
+    <h2 id="in-h">1. Your stub</h2>
+    <div class="samples" role="group" aria-label="Made up sample stubs">
+      <span>Try a made up stub:</span>
+      <button type="button" data-sample="biweekly-ok.txt">Biweekly, all correct</button>
+      <button type="button" data-sample="biweekly-ei-off.txt">Biweekly, EI too high</button>
+      <button type="button" data-sample="monthly-cpp2.txt">Monthly, CPP2 starts</button>
+    </div>
+    <label for="stubText">Stub text</label>
+    <textarea id="stubText" rows="12" spellcheck="false" placeholder="Paste the text of your pay stub here"></textarea>
+    <label for="stubImage">Or a photo or screenshot (PNG or JPEG)</label>
+    <input id="stubImage" type="file" accept="image/png,image/jpeg">
+    <fieldset>
+      <legend>Where the stub is read</legend>
+      <label><input type="radio" name="mode" value="device-first" checked> On this device first, cloud if the device cannot</label>
+      <label><input type="radio" name="mode" value="device-only"> On this device only</label>
+      <label><input type="radio" name="mode" value="basic"> Basic reader (text only, no model)</label>
+    </fieldset>
+    <button id="readBtn" type="button" class="primary">Read and check</button>
+    <p id="status" class="status" role="status" aria-live="polite"></p>
+  </section>
+
+  <section class="card" aria-labelledby="f-h">
+    <h2 id="f-h">2. What was read <span class="hint">(fix anything that looks wrong)</span></h2>
+    <p id="source" class="source"></p>
+    <form id="fields" class="fields">
+      <label>Paid
+        <select name="frequency">
+          <option value="">choose</option><option value="weekly">Weekly</option><option value="biweekly">Biweekly</option><option value="semimonthly">Twice a month</option><option value="monthly">Monthly</option>
+        </select></label>
+      <label>Gross pay <input name="gross" inputmode="decimal"></label>
+      <label>CPP <input name="cpp" inputmode="decimal"></label>
+      <label>CPP2 <input name="cpp2" inputmode="decimal"></label>
+      <label>EI <input name="ei" inputmode="decimal"></label>
+      <label>Income tax <input name="incomeTax" inputmode="decimal"></label>
+      <label>Other deductions <input name="otherDeductions" inputmode="decimal"></label>
+      <label>Net pay <input name="net" inputmode="decimal"></label>
+      <label>Year to date gross <input name="ytdGross" inputmode="decimal"></label>
+      <label>Year to date CPP <input name="ytdCpp" inputmode="decimal"></label>
+      <label>Year to date EI <input name="ytdEi" inputmode="decimal"></label>
+    </form>
+    <p id="disagree" class="disagree"></p>
+  </section>
+
+  <section class="card" aria-labelledby="r-h">
+    <h2 id="r-h">3. The check</h2>
+    <p id="verdict" class="verdict"></p>
+    <table id="results"><caption class="sr">Each deduction, what the stub shows, and what the 2026 rates give</caption>
+      <thead><tr><th scope="col">Line</th><th scope="col">On the stub</th><th scope="col">2026 rates give</th><th scope="col">Difference</th><th scope="col">How</th></tr></thead>
+      <tbody></tbody></table>
+    <ul id="notes" class="notes"></ul>
+  </section>
+
+  <section class="card small" aria-labelledby="p-h">
+    <h2 id="p-h">Privacy and limits</h2>
+    <ul>
+      <li>On this device only keeps the stub in Chrome. The other read modes may send it to Google to be read. The basic reader never leaves the page.</li>
+      <li>Nothing is saved or logged by this page.</li>
+      <li>Rates are for 2026, Canada outside Quebec, one employer: CPP 5.95% above a 3,500 yearly exemption up to 74,600; CPP2 4% from 74,600 to 85,000; EI 1.63% up to 68,900 (CRA, checked Nov 14, 2026).</li>
+      <li>Income tax is not checked, because it depends on your TD1 claims. Taxable benefits and pay periods that span two years are not handled.</li>
+      <li>This is a check, not payroll advice. If something differs, ask your payroll team for the calculation.</li>
+    </ul>
+    <p class="src">Sources: <a href="https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/payroll/payroll-deductions-contributions/canada-pension-plan-cpp/cpp-contribution-rates-maximums-exemptions.html">CRA CPP rates</a> · <a href="https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/payroll/calculating-deductions/making-deductions/second-additional-cpp-contribution-rates-maximums.html">CRA CPP2 rates</a> · <a href="https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/payroll/payroll-deductions-contributions/employment-insurance-ei/ei-premium-rates-maximums.html">CRA EI rates</a> · <a href="https://github.com/ALENZACODES/stub-check">Source code</a></p>
+  </section>
+</main>
+<footer>Made by John Khan in Toronto, Ontario. Sample stubs are made up.</footer>
+<script src="checker.js"></script>
+<script src="reader.js"></script>
+<script type="module" src="app.js"></script>
+</body>
+</html>

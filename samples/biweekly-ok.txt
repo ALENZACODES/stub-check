@@ -1,0 +1,11 @@
+MAPLE AND OAK BAKERY LTD
+Employee: Sample Worker            Pay period: Nov 1 to Nov 14, 2026
+Pay frequency: Biweekly            Pay date: Nov 20, 2026
+
+                         Current      Year to date
+Gross pay               2,400.00        52,800.00
+CPP contributions         134.79         2,965.38
+CPP2                        0.00             0.00
+EI premium                 39.12           860.64
+Income tax                290.00         6,380.00
+Net pay                 1,936.09        42,593.98

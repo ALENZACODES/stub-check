@@ -1,0 +1,11 @@
+HARBOURFRONT DESIGN CO
+Employee: Sample Worker            Pay date: Oct 31, 2026
+Pay frequency: Monthly
+
+                         Current      Year to date
+Gross pay               8,000.00        80,000.00
+CPP contributions         102.60         4,230.45
+CPP2                      216.00           216.00
+EI premium                  0.00         1,123.07
+Income tax              1,650.00        16,500.00
+Net pay                 6,031.40        57,930.48
