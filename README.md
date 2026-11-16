@@ -56,6 +56,33 @@ Open http://localhost:8080/.
 
 Canada outside Quebec, one employer, 2026 only. Income tax is not checked because it depends on TD1 claims. Taxable benefits, bonuses taxed separately and pay periods spanning two years are not handled. The sample stubs are made up.
 
+## Project structure
+
+```text
+stub-check/
+├── .github/
+│   └── workflows/           # CI workflows (1 file)
+├── data/                    # 2026 payroll rates
+│   └── rates-2026.json
+├── samples/                 # Sample pay stubs
+│   ├── biweekly-ei-off.txt
+│   ├── biweekly-ok.txt
+│   └── monthly-cpp2.txt
+├── tests/                   # Automated tests
+│   └── test_checker.mjs
+├── app.js                   # Interface logic
+├── checker.js               # Payroll math for a 2026 Ontario pay stub (pure functions)
+├── config.js                # Firebase project settings
+├── DEVPOST.md               # Submission write-up
+├── index.html               # Page markup
+├── LICENSE                  # Licence
+├── model.js                 # Hybrid reader: Gemini Nano in Chrome, cloud Gemini otherwise
+├── NOTICE                   # Third-party notices
+├── reader.js                # Pattern-based reader used when no model is set up
+├── README.md                # This file
+└── styles.css               # Styles
+```
+
 ## License
 
 Apache License 2.0. See `LICENSE`.
